@@ -1,2 +1,2 @@
-FROM ubuntu:latest
-COPY calculator.sh /app/calculator.sh
+FROM openjdk:11
+COPY calculator.java /app/calculator.java
