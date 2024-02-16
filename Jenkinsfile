@@ -52,10 +52,12 @@ pipeline {
 
 				script {
 
-					docker.withRegistry('https://hub.docker.com/repositories/hemantkumarcpersonal', 'dockerhub-credentials') 
-					sh "docker tag calculator hemantkumarcpersonal/calculator:1.0.0"
-					sh "docker push hemantkumarcpersonal/calculator"
+					docker.withRegistry('https://hub.docker.com/repositories/hemantkumarcpersonal', 'dockerhub-credentials') {
 
+						sh "docker tag calculator hemantkumarcpersonal/calculator:1.0.0"
+						sh "docker push hemantkumarcpersonal/calculator"
+
+					}
 				}
 
 			}
