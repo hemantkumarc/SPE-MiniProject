@@ -54,8 +54,8 @@ pipeline {
 
 					docker.withRegistry('', 'dockerhub-credentials') {
 
-						sh "docker image tag calculator hemantkumarcpersonal/calculator:1.0.0"
-						sh "docker push hemantkumarcpersonal/calculator"
+						sh "docker image tag calculator hemantkumarcpersonal/calculator:latest"
+						sh "docker push hemantkumarcpersonal/calculator:latest"
 
 					}
 				}
